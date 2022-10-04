@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col lg-12">
+     <div class="card p-5">
+      <%= form_with(model: product) do |form| %>
+        <% if product.errors.any? %>  
+          <div style="color: red">
+            <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+            <ul>
+              <% product.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= form.label :nombre, style: "display: block" %>
+          <%= form.text_field :nombre, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cod_instituto, style: "display: block" %>
+          <%= form.text_field :cod_instituto, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cod_senecyt, style: "display: block" %>
+          <%= form.text_field :cod_senecyt, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cod_fisico, style: "display: block" %>
+          <%= form.text_field :cod_fisico, class: 'form-control'%>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cod_anterior, style: "display: block" %>
+          <%= form.text_field :cod_anterior, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :cod_serie, style: "display: block" %>
+          <%= form.text_field :cod_serie, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :descripcion, style: "display: block" %>
+          <%= form.text_area :descripcion, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :color, style: "display: block" %>
+          <%= form.text_area :color, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :material, style: "display: block" %>
+          <%= form.text_area :material, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :marca, style: "display: block" %>
+          <%= form.text_area :marca, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :estado, style: "display: block" %>
+          <%= form.text_area :estado, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :references, style: "display: block" %>
+          <%= form.text_field :references, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= form.submit "Enviar", class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+           
+     </div>
+  </div>
+</div>
+
+
+

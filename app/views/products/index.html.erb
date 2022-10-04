@@ -1,0 +1,50 @@
+<h1>Listado de Productos</h1>
+<a href="<%= new_product_path %>" class="btn btn-primary btn-icon-split">
+  <span class="icon text-white-50">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span class="text">Crear Producto</span>
+</a>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Código Instituto</th>
+      <th>Código Senecyt</th>
+      <th>Código Físico</th>
+      <th>Código Anterior</th>
+      <th>Código Serie</th>
+      <th>Descripción</th>
+      <th>Color</th>
+      <th>Material</th>
+      <th>Marca</th>
+      <th>Estado</th>
+      <th>Ubicación</th>
+      <th>Cantidad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.nombre %></td>
+          <td><%= product.cod_instituto %></td>
+          <td><%= product.cod_senecyt %></td>
+          <td><%= product.cod_fisico %></td>
+          <td><%= product.cod_anterior %></td>
+          <td><%= product.cod_serie %></td>
+          <td><%= product.descripcion%></td>
+          <td><%= product.color%></td>
+          <td><%= product.material%></td>
+          <td><%= product.marca%></td>
+          <td><%= product.estado%></td>
+          <td><%= product.references%></td>
+          <td><%=  0 %></td>
+          <td><%= link_to 'Detalles', product_path(product), class: 'btn btn-primary' %></td>
+        </tr>
+      <% end %> 
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  cod_instituto: MyString
+  cod_senecyt: MyString
+  cod_fisico: MyString
+  cod_anterior: MyString
+  cod_serie: MyString
+  descripcion: MyText
+  color: MyText
+  material: MyText
+  marca: MyText
+  estado: MyText
+  references: MyString
+
+two:
+  nombre: MyString
+  cod_instituto: MyString
+  cod_senecyt: MyString
+  cod_fisico: MyString
+  cod_anterior: MyString
+  cod_serie: MyString
+  descripcion: MyText
+  color: MyText
+  material: MyText
+  marca: MyText
+  estado: MyText
+  references: MyString
