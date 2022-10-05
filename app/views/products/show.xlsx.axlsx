@@ -2,10 +2,10 @@ wb = xlsx_package.workbook
 
 wb.add_worksheet(name: "Movimientos") do |sheet|
   sheet.add_row(["ID", @product.id])
-  sheet.add_row(["Referencia", @product.reference])
-  sheet.add_row(["Nombre", @product.name])
+  sheet.add_row(["Referencia", @product.references])
+  sheet.add_row(["Nombre", @product.nombre])
   sheet.add_row(["Cantidad", @product.quantity])
-  sheet.add_row(["Descripción", @product.description])
+  sheet.add_row(["Descripción", @product.descripcion])
   sheet.add_row(["Fecha de creación", @product.created_at])
   sheet.add_row([])
   sheet.add_row ["Tipo", "Cantidad", "Comentario", "Fecha"]
